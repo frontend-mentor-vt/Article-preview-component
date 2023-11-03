@@ -1,5 +1,6 @@
 import MainComponent from "./components/main/MainComponent";
 import styled from "styled-components";
+import { useState } from "react";
 
 const AppWrapper = styled.div`
   max-width: 1440px;
@@ -10,10 +11,22 @@ const AppWrapper = styled.div`
   align-items: center;
   height: 100vh;
 `;
+
 function App() {
+  const [isOpened, setIsOpened] = useState(false);
+
+  const handleModal = () => {
+    setIsOpened(!isOpened);
+  };
+  const closeModal = () => {
+    if (isOpened === true) {
+      setIsOpened(false);
+    }
+  };
+
   return (
-    <AppWrapper>
-      <MainComponent />
+    <AppWrapper onClick={closeModal}>
+      <MainComponent handleModal={handleModal} isOpened={isOpened} />
     </AppWrapper>
   );
 }
