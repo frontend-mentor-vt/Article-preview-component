@@ -50,7 +50,7 @@ const MainComponent = (props) => {
               }
               onClick={handleModal}
             >
-              {isOpened === false && screenWidth <= 1000 ? (
+              {isOpened ? (
                 <>
                   <svg
                     className="arrow-icon"
@@ -82,7 +82,6 @@ const MainComponent = (props) => {
                       />
                     </g>
                   </svg>
-                  <Modal />
                 </>
               )}
             </div>
