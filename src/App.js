@@ -1,17 +1,24 @@
 import MainComponent from "./components/main/MainComponent";
-import styled from "styled-components";
 import { useState } from "react";
+import styled from "styled-components";
 
 const AppWrapper = styled.div`
   max-width: 1440px;
-  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-`;
+  background-color: white;
 
+  @media screen and (max-width: 500px) {
+    & {
+      height: auto;
+      display: block;
+      box-shadow: none;
+    }
+  }
+`;
 function App() {
   const [isOpened, setIsOpened] = useState(false);
 

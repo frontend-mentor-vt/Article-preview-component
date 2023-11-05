@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-export const ModalWrapp = styled.div`
+export const MainModalWrapp = styled.div`
   position: absolute;
   bottom: 118px;
-  padding: 30px 23px 30px 14px;
+  padding: 30px 11px 30px 11px;
   gap: 20px;
   width: 330px;
   background-color: hsl(217, 19%, 35%);
@@ -36,5 +36,25 @@ export const ModalWrapp = styled.div`
     background-color: hsl(217, 19%, 35%);
     display: block;
     transform: rotate(45deg);
+  }
+`;
+
+export const MediaModalWrapp = styled(MainModalWrapp)`
+  justify-content: space-between;
+
+  .left-side-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .share-icon-wrapp {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: hsl(214, 17%, 51%);
+    cursor: pointer;
   }
 `;
