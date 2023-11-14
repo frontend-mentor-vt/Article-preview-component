@@ -40,12 +40,24 @@ export const MainModalWrapp = styled.div`
 `;
 
 export const MediaModalWrapp = styled(MainModalWrapp)`
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: auto;
+  border-radius: 0 0 16px 16px;
   justify-content: space-between;
-
+  padding: 18px 25px 18px 25px;
   .left-side-wrapper {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 16px;
+  }
+  .text {
+    letter-spacing: 8px;
+    font-size: 16px;
+  }
+  &::after {
+    display: none;
   }
   .share-icon-wrapp {
     width: 40px;

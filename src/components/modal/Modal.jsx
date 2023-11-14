@@ -1,7 +1,8 @@
 import { MediaModalWrapp, MainModalWrapp } from "./StyledModal";
 import useMediaQuery from "../../hooks/mediaQuery";
 
-const Modal = () => {
+const Modal = (props) => {
+  const { action } = props;
   const stopPropagation = (event) => {
     event.stopPropagation();
   };
@@ -36,7 +37,7 @@ const Modal = () => {
           </div>
         </MainModalWrapp>
       ) : (
-        <MediaModalWrapp>
+        <MediaModalWrapp onClick={stopPropagation}>
           <div className="left-side-wrapper">
             <p className="text">Share</p>
             <a
@@ -61,7 +62,7 @@ const Modal = () => {
               <img src="/images/icon-pinterest.svg" alt="" />
             </a>
           </div>
-          <div className="share-icon-wrapp">
+          <div className="share-icon-wrapp" onClick={action}>
             <svg
               className="arrow-icon"
               xmlns="http://www.w3.org/2000/svg"

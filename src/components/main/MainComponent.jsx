@@ -10,7 +10,9 @@ import {
 
 const MainComponent = (props) => {
   const { isOpened, handleModal } = props;
+
   const { screenWidth } = useMediaQuery();
+
   return (
     <ContentContainer>
       <div className="image-wrapp">
@@ -25,14 +27,29 @@ const MainComponent = (props) => {
           </span>{" "}
           furniture in your home
         </h1>
-        <p className="description">
-          Ever been in the room and felt like something was missing? Perhaps it
-          felt slightly bare uninviting. I've got some simple tips to help you
-          make any room feel complete.
-        </p>
+        {screenWidth <= 500 ? (
+          <p className="description">
+            Ever been in the room and felt like <br />
+            something was missing? Perhaps it felt <br /> slightly bare
+            uninviting. I've got some <br /> simple tips to help you make any
+            room feel complete.
+          </p>
+        ) : (
+          <p className="description">
+            Ever been in the room and felt like something was missing? Perhaps
+            it felt slightly bare uninviting. I've got some simple tips to help
+            you make any room feel complete.
+          </p>
+        )}
 
         <BottomWrapp>
-          <div className="bottom-image-wrapp">
+          <div
+            className={
+              isOpened && screenWidth <= 500
+                ? "bottom-image-wrapp hide"
+                : "bottom-image-wrapp"
+            }
+          >
             <img
               className="bottom-image"
               src="/images/avatar-michelle.jpg"
@@ -43,7 +60,7 @@ const MainComponent = (props) => {
               <p className="data">28 June 2020</p>
             </div>
           </div>
-          <div className="share-icon-total-wrapp">
+          <div className="share-icon-total-wrapp ">
             <div
               className={
                 isOpened ? "icon-share-wrapp-back" : "icon-share-wrapp-main"
@@ -53,6 +70,7 @@ const MainComponent = (props) => {
               {isOpened ? (
                 <>
                   <svg
+                    onClick={handleModal}
                     className="arrow-icon"
                     xmlns="http://www.w3.org/2000/svg"
                     width="30"
@@ -65,7 +83,7 @@ const MainComponent = (props) => {
                       />
                     </g>
                   </svg>
-                  <Modal />
+                  <Modal action={handleModal} />
                 </>
               ) : (
                 <>

@@ -16,6 +16,7 @@ const AppWrapper = styled.div`
       height: auto;
       display: block;
       box-shadow: none;
+      border-radius: 16px;
     }
   }
 `;

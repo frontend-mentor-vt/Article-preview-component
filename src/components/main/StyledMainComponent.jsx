@@ -10,15 +10,18 @@ export const ContentContainer = styled.div`
     width: 96%;
   }
   .main-image {
+    border-radius: 20px;
     height: 100%;
   }
 
   @media screen and (max-width: 500px) {
     & {
       flex-direction: column;
+      box-shadow: none;
     }
     .main-image {
       max-width: 100%;
+      border-radius: 16px 16px 0 0;
     }
 
     .image-wrapp {
@@ -57,6 +60,7 @@ export const RightSide = styled.div`
 
   @media screen and (max-width: 500px) {
     & {
+      position: relative;
       padding: 35px;
       gap: 16px;
     }
@@ -67,11 +71,11 @@ export const RightSide = styled.div`
     .sub-title {
       letter-spacing: normal;
     }
-  }
-  .description {
-    font-size: 15px;
-    line-height: 27px;
-    text-align: left;
+    .description {
+      font-size: 16px;
+      line-height: 27px;
+      text-align: left;
+    }
   }
 `;
 
@@ -117,8 +121,13 @@ export const BottomWrapp = styled.div`
     color: hsl(212, 23%, 69%);
     font-size: 21px;
   }
-
+  .hide {
+    display: none;
+  }
   @media screen and (max-width: 500px) {
+    .share-icon-total-wrapp {
+      position: initial;
+    }
     .bottom-image-wrapp {
       gap: 18px;
     }
@@ -141,10 +150,6 @@ export const BottomWrapp = styled.div`
     .icon-share-wrapp-back {
       width: 40px;
       height: 40px;
-    }
-    .share-icon-total-wrapp {
-      /* position: initial; */
-      display: none;
     }
   }
 `;
