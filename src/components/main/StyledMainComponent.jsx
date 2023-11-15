@@ -4,15 +4,14 @@ export const ContentContainer = styled.div`
   width: 736px;
   height: 300px;
   display: flex;
-  box-shadow: 24px 20px 50px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
-
+  box-shadow: 0 11px 31px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
   .main-image {
     width: 305px;
     height: 100%;
     object-fit: cover;
     object-position: 0% 100%;
-    border-radius: 20px 0 0 20px;
+    border-radius: 10px 0 0 10px;
   }
 
   /* ContentContainer media query */
@@ -25,8 +24,7 @@ export const ContentContainer = styled.div`
     }
     .main-image {
       width: 100%;
-      /* height: 30%; */
-      border-radius: 16px 16px 0 0;
+      border-radius: 10px 10px 0 0;
     }
   }
 `;
@@ -37,7 +35,7 @@ export const RightSide = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 30px;
-
+  border-radius: 0 10px 10px 0;
   .title {
     color: hsl(217, 19%, 35%);
     font-size: 20px;
@@ -59,6 +57,7 @@ export const RightSide = styled.div`
 
   @media screen and (max-width: 500px) {
     & {
+      border-radius: 0 0 10px 10px;
       position: relative;
       padding: 35px;
       gap: 16px;

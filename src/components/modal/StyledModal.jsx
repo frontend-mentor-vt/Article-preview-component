@@ -10,7 +10,7 @@ export const MainModalWrapp = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 16px;
+  border-radius: 12px;
   cursor: default;
 
   .icons-wrapp {
@@ -44,8 +44,8 @@ export const MediaModalWrapp = styled(MainModalWrapp)`
   right: 0;
   left: 0;
   width: auto;
-  border-radius: 0 0 16px 16px;
-  justify-content: space-between;
+  border-radius: 0 0 10px 10px;
+  justify-content: space-around;
   padding: 18px 25px 18px 25px;
   .left-side-wrapper {
     display: flex;
