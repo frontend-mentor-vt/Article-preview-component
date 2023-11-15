@@ -1,62 +1,61 @@
 import styled from "styled-components";
 
 export const ContentContainer = styled.div`
+  width: 736px;
+  height: 300px;
   display: flex;
   box-shadow: 24px 20px 50px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
 
-  .image-wrapp {
-    overflow: hidden;
-    width: 96%;
-  }
   .main-image {
-    border-radius: 20px;
+    width: 305px;
     height: 100%;
+    object-fit: cover;
+    object-position: 0% 100%;
+    border-radius: 20px 0 0 20px;
   }
+
+  /* ContentContainer media query */
 
   @media screen and (max-width: 500px) {
     & {
       flex-direction: column;
+      width: 88%;
       box-shadow: none;
     }
     .main-image {
-      max-width: 100%;
-      border-radius: 16px 16px 0 0;
-    }
-
-    .image-wrapp {
-      overflow: hidden;
       width: 100%;
+      /* height: 30%; */
+      border-radius: 16px 16px 0 0;
     }
   }
 `;
 
 export const RightSide = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  background-color: white;
   flex-direction: column;
-  padding: 70px 61px 36px 70px;
-  gap: 20px;
-background-color: white;
+  justify-content: space-between;
+  padding: 30px;
+
   .title {
     color: hsl(217, 19%, 35%);
-    font-size: 41px;
+    font-size: 20px;
   }
 
   .description {
     color: hsl(212, 23%, 69%);
     font-weight: 700;
-    font-size: 26px;
+    font-size: 13px;
     text-align: justify;
-    max-width: 737px;
-    line-height: 40px;
+    max-width: 368px;
   }
-  .avatar-name {
-    color: hsl(217, 19%, 35%);
-  }
+
   .sub-title {
-    letter-spacing: 1.5px;
+    letter-spacing: 0.5px;
   }
+
+  /* RightSide media query */
 
   @media screen and (max-width: 500px) {
     & {
@@ -85,8 +84,8 @@ export const BottomWrapp = styled.div`
   align-items: center;
 
   .icon-share-wrapp-main {
-    width: 66px;
-    height: 66px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,8 +94,8 @@ export const BottomWrapp = styled.div`
     cursor: pointer;
   }
   .icon-share-wrapp-back {
-    width: 66px;
-    height: 66px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,20 +109,28 @@ export const BottomWrapp = styled.div`
   .bottom-image-wrapp {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 17px;
   }
   .bottom-image {
-    width: 112px;
-    height: 112px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
+  }
+  .avatar-name {
+    font-size: 15px;
+    margin: 0;
+    color: hsl(217, 19%, 35%);
   }
   .data {
     color: hsl(212, 23%, 69%);
-    font-size: 21px;
+    font-size: 13px;
   }
   .hide {
     display: none;
   }
+
+  /* BottomWrapp media query */
+
   @media screen and (max-width: 500px) {
     .share-icon-total-wrapp {
       position: initial;
@@ -143,7 +150,7 @@ export const BottomWrapp = styled.div`
       font-size: 15px;
     }
     .arrow-icon {
-      transform: scale(0.6);
+      /* transform: scale(0.6); */
     }
 
     .icon-share-wrapp-main,
