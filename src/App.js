@@ -10,11 +10,9 @@ const AppWrapper = styled.div`
   align-items: center;
   height: 100vh;
 
-
   @media screen and (max-width: 500px) {
     & {
-      height: auto;
-      display: block;
+      height: 50vh;
       box-shadow: none;
       border-radius: 16px;
     }

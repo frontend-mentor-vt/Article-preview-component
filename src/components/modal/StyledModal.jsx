@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const MainModalWrapp = styled.div`
   position: absolute;
-  bottom: 118px;
-  padding: 30px 11px 30px 11px;
-  gap: 20px;
-  width: 330px;
+  bottom: 70px;
+  padding: 15px 0 15px 0;
+  gap: 13px;
+  width: 270px;
   background-color: hsl(217, 19%, 35%);
   display: flex;
   align-items: center;
@@ -20,7 +20,7 @@ export const MainModalWrapp = styled.div`
   }
 
   .text {
-    font-size: 18px;
+    font-size: 12px;
     text-transform: uppercase;
     color: hsl(212, 23%, 69%);
     letter-spacing: 10px;
@@ -28,11 +28,11 @@ export const MainModalWrapp = styled.div`
   }
   &::after {
     position: absolute;
-    bottom: -13px;
+    bottom: -9px;
     right: 46%;
     content: "";
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     background-color: hsl(217, 19%, 35%);
     display: block;
     transform: rotate(45deg);
