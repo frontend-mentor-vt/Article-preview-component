@@ -37,7 +37,7 @@ export const RightSide = styled.div`
   flex-direction: column;
   padding: 70px 61px 36px 70px;
   gap: 20px;
-
+background-color: white;
   .title {
     color: hsl(217, 19%, 35%);
     font-size: 41px;

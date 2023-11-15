@@ -8,7 +8,7 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: 'Manrope', sans-serif;
-    background-color: hsl(210, 46%, 95%);
+   
   };
   p,h1,div{
     margin: 0;
